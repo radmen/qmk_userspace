@@ -1,0 +1,21 @@
+{
+    "userspace_version": "1.1",
+    "build_targets": [
+        [
+            "splitkb/halcyon/corne/rev2",
+            "vial_hlc",
+            {
+                "HLC_TFT_DISPLAY": "1",
+                "TARGET": "splitkb_halcyon_corne_rev2_vial_hlc_display"
+            }
+        ],
+        [
+            "splitkb/halcyon/corne/rev2",
+            "vial_hlc",
+            {
+                "HLC_CIRQUE_TRACKPAD": "1",
+                "TARGET": "splitkb_halcyon_corne_rev2_vial_hlc_cirque_trackpad"
+            }
+        ]
+    ]
+}

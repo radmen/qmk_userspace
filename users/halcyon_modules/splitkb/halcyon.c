@@ -91,6 +91,10 @@ void keyboard_post_init_kb(void) {
     keyboard_post_init_user();
 }
 
+void pointing_device_init_user(void) {
+    set_auto_mouse_enable(true);
+}
+
 void housekeeping_task_kb(void) {
     if (is_keyboard_master()) {
         static bool synced = false;

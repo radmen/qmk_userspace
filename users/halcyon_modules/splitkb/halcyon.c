@@ -92,7 +92,9 @@ void keyboard_post_init_kb(void) {
 }
 
 void pointing_device_init_user(void) {
+#ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
     set_auto_mouse_enable(true);
+#endif
 }
 
 void housekeeping_task_kb(void) {

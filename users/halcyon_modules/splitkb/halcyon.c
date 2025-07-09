@@ -5,7 +5,6 @@
 #include "halcyon.h"
 #include "transactions.h"
 #include "split_util.h"
-#include "features/orbital_mouse.h"
 #include "_wait.h"
 
 __attribute__((weak)) void module_suspend_power_down_kb(void);
@@ -99,11 +98,6 @@ void pointing_device_init_user(void) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
-  if (!process_orbital_mouse(keycode, record)) {
-      return false;
-  }
-
-  // Your macros ...
   return true;
 }
 
@@ -145,7 +139,6 @@ void housekeeping_task_kb(void) {
 }
 
 void housekeeping_task_user(void) {
-  orbital_mouse_task();
 }
 
 // Kyria

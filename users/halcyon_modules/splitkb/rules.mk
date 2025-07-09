@@ -10,7 +10,6 @@ BACKLIGHT_ENABLE = yes
 BACKLIGHT_DRIVER = pwm
 
 VPATH += $(USER_PATH)/splitkb/
-SRC += $(USER_PATH)/splitkb/features/orbital_mouse.c
 SRC += $(USER_PATH)/splitkb/halcyon.c
 HALCONFDIR += $(USER_PATH)/splitkb/halconf.h
 POST_CONFIG_H += $(USER_PATH)/splitkb/config.h

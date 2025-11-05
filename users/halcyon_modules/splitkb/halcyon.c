@@ -97,6 +97,20 @@ void pointing_device_init_user(void) {
 #endif
 }
 
+report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
+#ifdef MOUSE_LAYER
+    // Lock the pointing device if target layer is not active
+    if (! IS_LAYER_ON(MOUSE_LAYER)) {
+        mouse_report.h = 0;
+        mouse_report.v = 0;
+        mouse_report.x = 0;
+        mouse_report.y = 0;
+    }
+#endif
+
+    return mouse_report;
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
   return true;
 }
